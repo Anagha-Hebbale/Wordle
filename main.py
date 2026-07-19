@@ -3,12 +3,14 @@ print("Welcome to Wordle!")
 import random
 words = ["apple", "grape", "chair", "house", "table","water","radio","crazy","audio","ocean","fruit","truck"
          ,"plant","light","night","sound","music","dance","smile","laugh","happy","angry","sadly","quick",
-         "brown","green","black","white","small","large","short","round","square","circle","heart","stars","cloud"
-         ,"river","mount","beach","helix","vivid","blaze","storm","flame","frost","globe","laser","pixel","quark"]
+         "brown","green","black","white","small","large","short","round","squat","circle","heart","stars","cloud"
+         ,"river","mount","beach","helix","vivid","blaze","storm","flame","frost","globe","laser","pixel","quark"
+         ,"zebra","tiger","eagle","shark","whale","panda","koala","otter","sloth","lemur","rhino","hippo",]
 secret = random.choice(words)
 
 print("Guess the 5-Letter Word:")
 j=0
+c=0
 while j<5:
     j+=1
     guess=input()
@@ -27,11 +29,7 @@ while j<5:
     print(code)  
     if guess==secret:
         print("The word is",secret,"!")
+        c=1
         break
-if j==5:
+if c==0:
      print("You have used all your guesses. The word was: ", secret)
-
-        
-        
-    
-   
