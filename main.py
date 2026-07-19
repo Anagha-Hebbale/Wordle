@@ -6,6 +6,10 @@ j=0
 while j<5:
     j+=1
     guess=input()
+    if len(guess)!=5:
+        print("Please enter a 5-letter word.")
+        j-=1
+        continue
     code=[]
     i=0
     for i in range(5):
